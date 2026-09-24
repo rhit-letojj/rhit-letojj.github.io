@@ -44,7 +44,7 @@ def main():
             
             print(file_path)
             
-            if file_path == "./public/shutdown":
+            if file_path == "./shutdown":
                 print("Server shutting down")
                 shutdown_connection(connection_to_browser)
                 exit()
@@ -116,7 +116,7 @@ def shutdown_connection(connection_to_browser):
     connection_to_browser.close()
 
 def get_requested_filename(request_line):
-    return "./public" + request_line.split(" ")[1]
+    return "./" + request_line.split(" ")[1]
 
 def get_file_type(file_path):
     if file_path.endswith(".png"): return ".png"
