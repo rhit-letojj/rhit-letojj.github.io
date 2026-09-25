@@ -54,6 +54,11 @@ img {
     margin-right: 5rem;
 }
 
-a:visited{
-    color: var(--tertiary-color);
+a{
+    font-family: sans-serif;
 }
+
+a:link    { color: white; }
+a:visited { color: var(--tertiary-color); }
+a:hover   { color: blueviolet; }
+a:active  { color: yellow; }
