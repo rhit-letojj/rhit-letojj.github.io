@@ -3,6 +3,8 @@
 // was made with help from the solutions on a StackOverflow.com forum
 // https://stackoverflow.com/questions/38837835/include-html-in-another-html-file
 
+//some code was created with assistance from Claude LLM
+
 function loadPartial(file, targetId) {
   return fetch(file)
     .then((response) => response.text())

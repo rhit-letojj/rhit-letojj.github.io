@@ -1,12 +1,19 @@
-/* Code made with assistance from Claude LLM */
+/*Some Code made with assistance from Claude LLM */
+
 :root {
-  --bg: #16232f;
-  --surface: #203242;
-  --surface-2: #2a4155;
-  --line: #36506a;
-  --text: #eaf0f5;
-  --muted: #a9bccb;
-  --accent: #e3b055;
+  color-scheme: dark;
+  --bg: #0f1720;
+  --surface: #17222e;
+  --surface-2: #223244;
+  --line: #2c3d50;
+  --text: #e6ecf2;
+  --muted: #9aacbd;
+  --accent: #7fb2e5;
+  --accent-hover: #b9d6f2;
+  --gold: #d0a95a;
+  --nav-bg: #0a1118;
+  --nav-text: #eef3f8;
+  --nav-muted: #8ea2b5;
   --font-head: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
@@ -33,8 +40,8 @@ h3 { font-size: 1.15rem; }
 p { margin: 0 0 1rem; max-width: 65ch; }
 
 a { color: var(--accent); text-underline-offset: .2em; }
-a:hover { color: #fff; }
-a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+a:hover { color: var(--accent-hover); }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
 /* Navigation and footer */
 .strip {
@@ -43,16 +50,15 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
   justify-content: center;
   gap: .5rem 2rem;
   padding: 1.1rem 1.25rem;
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
+  background: var(--nav-bg);
   font-family: var(--font-head);
 }
-footer.strip { border-bottom: 0; border-top: 1px solid var(--line); font-size: .95rem; }
-.strip a { color: var(--text); text-decoration: none; padding: .25rem 0; border-bottom: 2px solid transparent; }
-.strip a:hover { color: var(--accent); }
-.strip a[aria-current="page"] { border-bottom-color: var(--accent); }
-footer.strip a { color: var(--muted); }
-footer.strip a:hover { color: var(--accent); }
+footer.strip { font-size: .95rem; border-top: 1px solid var(--line); }
+.strip a { color: var(--nav-text); text-decoration: none; padding: .25rem 0; border-bottom: 2px solid transparent; }
+.strip a:hover { color: #fff; border-bottom-color: var(--nav-muted); }
+.strip a[aria-current="page"] { border-bottom-color: var(--gold); }
+footer.strip a { color: var(--nav-muted); }
+footer.strip a:hover { color: #fff; border-bottom-color: var(--nav-muted); }
 
 /* Content blocks */
 .page-title { margin-bottom: 2rem; }
@@ -66,6 +72,7 @@ footer.strip a:hover { color: var(--accent); }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: .75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
 }
 
 .areaContainer img {
@@ -84,11 +91,11 @@ footer.strip a:hover { color: var(--accent); }
 .resume { display: block; }
 .resume header { text-align: center; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
 .resume section { margin-bottom: 1.75rem; }
-.resume h2 { padding-bottom: .4rem; border-bottom: 2px solid var(--accent); display: inline-block; }
+.resume h2 { padding-bottom: .4rem; border-bottom: 2px solid var(--gold); display: inline-block; }
 .resume ul { padding-left: 1.25rem; margin: 0 0 1rem; }
 .resume li { margin-bottom: .3rem; }
 .resume .tech { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
-.resume .tech li { margin: 0; padding: .25rem .8rem; background: var(--surface-2); border-radius: 999px; font-size: .95rem; }
+.resume .tech li { margin: 0; padding: .25rem .8rem; background: var(--surface-2); color: var(--accent-hover); border-radius: 999px; font-size: .95rem; }
 .resume .role { margin-bottom: 1.25rem; }
 .resume .role h3 { margin-bottom: .25rem; }
 .muted { color: var(--muted); }
