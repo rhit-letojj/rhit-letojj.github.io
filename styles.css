@@ -1,64 +1,99 @@
+/* Code made with assistance from Claude LLM */
 :root {
-  --primary-color: #4e7998;
-  --secondary-color: #426782;
-  --tertiary-color: #343434;
+  --bg: #16232f;
+  --surface: #203242;
+  --surface-2: #2a4155;
+  --line: #36506a;
+  --text: #eaf0f5;
+  --muted: #a9bccb;
+  --accent: #e3b055;
+  --font-head: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 }
 
-.text{
-    color: white;
-    font-family: sans-serif;
-    font-weight: bold;
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
 }
 
-.strip{
-    display: flex;
-    background-color: var(--secondary-color);
-    height: 5rem;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+main { flex: 1; width: min(68rem, 100% - 2.5rem); margin: 0 auto; padding: 3rem 0; }
+
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; margin: 0 0 .75rem; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 1rem; max-width: 65ch; }
+
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #fff; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+/* Navigation and footer */
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem 2rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-head);
+}
+footer.strip { border-bottom: 0; border-top: 1px solid var(--line); font-size: .95rem; }
+.strip a { color: var(--text); text-decoration: none; padding: .25rem 0; border-bottom: 2px solid transparent; }
+.strip a:hover { color: var(--accent); }
+.strip a[aria-current="page"] { border-bottom-color: var(--accent); }
+footer.strip a { color: var(--muted); }
+footer.strip a:hover { color: var(--accent); }
+
+/* Content blocks */
+.page-title { margin-bottom: 2rem; }
+
+.areaContainer {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: .75rem;
 }
 
-.strip a{
-    padding: 4rem;
-    text-decoration: none;
+.areaContainer img {
+  flex: 0 0 auto;
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: .5rem;
+  border: 1px solid var(--line);
 }
 
-body{
-    background-color: var(--primary-color);
-}
+.textArea { flex: 1; }
+.lead { font-size: 1.15rem; color: var(--muted); }
 
-img {
-    width: 20rem;
-    height: 20rem;
-    border: solid;
-    border-color: var(--tertiary-color);
-    border-width: .5rem;
-}
+/* Resume */
+.resume { display: block; }
+.resume header { text-align: center; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+.resume section { margin-bottom: 1.75rem; }
+.resume h2 { padding-bottom: .4rem; border-bottom: 2px solid var(--accent); display: inline-block; }
+.resume ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+.resume li { margin-bottom: .3rem; }
+.resume .tech { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
+.resume .tech li { margin: 0; padding: .25rem .8rem; background: var(--surface-2); border-radius: 999px; font-size: .95rem; }
+.resume .role { margin-bottom: 1.25rem; }
+.resume .role h3 { margin-bottom: .25rem; }
+.muted { color: var(--muted); }
 
-.areaContainer{
-    display: flex;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-    background-color: var(--secondary-color);
-    align-items: center;
+@media (max-width: 720px) {
+  .areaContainer { flex-direction: column; align-items: flex-start; padding: 1.25rem; gap: 1.5rem; }
+  .areaContainer img { width: 100%; height: auto; aspect-ratio: 1; max-width: 22rem; }
 }
-
-.textArea{
-    background-color: var(--tertiary-color);
-    padding: 2rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-}
-
-a{
-    font-family: sans-serif;
-}
-
-a:link    { color: white; }
-a:visited { color: var(--tertiary-color); }
-a:hover   { color: var(--primary-color); }
-a:active  { color: blue; }
