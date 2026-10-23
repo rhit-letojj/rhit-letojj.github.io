@@ -1,41 +1,47 @@
-<!-- some code was created with assistance from Claude LLM -->
-
 <!DOCTYPE html>
+<!-- some code was created with assistance from Claude LLM -->
 <html lang="en">
   <head>
     <title>Joseph J. Leto - Resume</title>
+    <meta name="description" content="Resume of Joseph J. Leto: skills, experience, and education.">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c131c">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230c131c'/%3E%3Ctext x='50' y='67' font-size='52' font-weight='700' text-anchor='middle' fill='%23d8b062' font-family='sans-serif'%3EJL%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
     <nav id="ribbon" class="strip" aria-label="Main"></nav>
-    <main>
-      <h1 class="page-title">Resume</h1>
-      <div class="areaContainer resume">
-        <div class="textArea">
-          <header>
-            <h2>Joseph J. Leto</h2>
-            <p class="muted" style="margin-inline: auto;">
-              5500 Wabash Avenue, Terre Haute, IN 47803<br>
-              (832) 732-2177 &middot; letojj@rose-hulman.edu
-            </p>
-            <p style="margin-inline: auto;">Future software developer focused on building real-world applications through hands-on learning.</p>
-          </header>
+    <main id="main">
+      <div class="page-head">
+        <h1>Resume</h1>
+        <button type="button" class="btn no-print" onclick="window.print()">Print or save as PDF</button>
+      </div>
+      <article class="resume">
+        <header>
+          <h2 class="name">Joseph J. Leto</h2>
+          <p>Future software developer focused on building real-world applications through hands-on learning.</p>
+        </header>
+        <aside>
+          <section>
+            <h2>Contact</h2>
+            <address class="muted">5500 Wabash Avenue<br>Terre Haute, IN 47803</address>
+            <p><a href="tel:+18327322177">(832) 732-2177</a><br><a href="mailto:letojj@rose-hulman.edu">letojj@rose-hulman.edu</a></p>
+          </section>
           <section>
             <h2>Familiar Technologies</h2>
-            <ul class="tech">
-              <li>Java</li><li>Python</li><li>HTML</li><li>JavaScript</li><li>CSS</li>
-              <li>C</li><li>ASM</li><li>Verilog</li><li>Lua</li>
-            </ul>
+            <ul class="tags"><li>Java</li><li>Python</li><li>HTML</li><li>JavaScript</li><li>CSS</li><li>C</li><li>ASM</li><li>Verilog</li><li>Lua</li></ul>
           </section>
+        </aside>
+        <div>
           <section>
             <h2>Work Experience</h2>
             <div class="role">
-              <h3>YouTube - JJ's Tech Review</h3>
+              <h3>YouTube - JJ’s Tech Review</h3>
               <ul>
                 <li>Over 46K subscribers, 750K average monthly viewers</li>
                 <li>Tech focused, exciting computer experiments</li>
@@ -62,7 +68,7 @@
             </div>
           </section>
         </div>
-      </div>
+      </article>
     </main>
     <footer id="footer" class="strip"></footer>
     <script src="script.js"></script>

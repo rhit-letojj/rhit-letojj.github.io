@@ -1,26 +1,42 @@
-<!-- some code was created with assistance from Claude LLM -->
-
 <!DOCTYPE html>
+<!-- some code was created with assistance from Claude LLM -->
 <html lang="en">
   <head>
     <title>Joseph J. Leto - Home</title>
+    <meta name="description" content="Portfolio of Joseph J. Leto, a Software Engineering student at Rose-Hulman Institute of Technology.">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c131c">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230c131c'/%3E%3Ctext x='50' y='67' font-size='52' font-weight='700' text-anchor='middle' fill='%23d8b062' font-family='sans-serif'%3EJL%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
     <nav id="ribbon" class="strip" aria-label="Main"></nav>
-    <main>
-      <div class="areaContainer">
-        <img src="portrait.png" alt="Joseph J. Leto professional portrait">
-        <div class="textArea">
+    <main id="main">
+      <div class="hero">
+        <div>
           <h1>Joseph J. Leto</h1>
           <p class="lead">Sophomore Software Engineering major at Rose-Hulman Institute of Technology.</p>
           <p>Welcome to my website! Feel free to look around, and contact me if you have any inquiries.</p>
+          <div class="actions">
+            <a class="btn primary" href="portfolio.html">See my projects</a>
+            <a class="btn" href="resume.html">View resume</a>
+            <a class="btn" href="mailto:letojj@rose-hulman.edu">Email me</a>
+          </div>
         </div>
+        <figure class="sheet">
+          <img src="portrait.png" width="400" height="400" fetchpriority="high" alt="Joseph J. Leto professional portrait">
+          <dl>
+            <dt>Name</dt><dd>Joseph J. Leto</dd>
+            <dt>Degree</dt><dd>B.S. Software Engineering</dd>
+            <dt>School</dt><dd>Rose-Hulman</dd>
+            <dt>Class of</dt><dd>2029</dd>
+          </dl>
+        </figure>
       </div>
     </main>
     <footer id="footer" class="strip"></footer>
