@@ -30,7 +30,7 @@ a{color:var(--link);text-underline-offset:.2em}a:hover{color:#fff}
 .btn.primary{background:var(--gold);border-color:var(--gold);color:#14110a}.btn.primary:hover{background:#e8c882;color:#14110a}
 
 /* Home: portrait set like an engineering drawing sheet with a title block */
-.hero{display:grid;grid-template-columns:1fr minmax(18rem,24rem);gap:4rem;align-items:center;min-height:60vh}
+.hero{display:grid;grid-template-columns:1fr minmax(18rem,24rem);gap:4rem;align-items:center;min-height:55vh}
 .lead{font-size:1.3rem;color:var(--muted)}
 .sheet{margin:0;padding:.6rem;background:var(--panel);border:1px solid var(--muted);outline:1px solid var(--line);outline-offset:.4rem}
 .sheet img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
@@ -48,6 +48,32 @@ a{color:var(--link);text-underline-offset:.2em}a:hover{color:#fff}
 .plate img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem;padding:0;list-style:none}
 .tags li{padding:.15rem .65rem;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.875rem}
+.project:first-of-type{border-top:0}
+.label{display:flex;align-items:center;gap:1rem;margin:3.5rem 0 .5rem;color:var(--gold);font:600 .8rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase}
+section:first-of-type>.label{margin-top:0}
+.label::after{content:"";flex:1;height:1px;background:var(--line)}
+.project h3{font-size:clamp(1.5rem,3vw,2rem)}
+.status{display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem;color:var(--gold);font-size:.85rem;font-weight:600}
+.status.done{color:var(--muted)}
+.dot{width:.5rem;height:.5rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(216,176,98,.6)}
+@media (prefers-reduced-motion:no-preference){.dot{animation:pulse 2.4s infinite}@keyframes pulse{70%{box-shadow:0 0 0 .45rem rgba(216,176,98,0)}100%{box-shadow:0 0 0 0 rgba(216,176,98,0)}}}
+.more{font-weight:600}.more::after{content:" \2192"}
+.plate{transition:border-color .25s}.project:hover .plate{border-color:var(--muted)}
+/* LiftLibrary barbell drawing */
+.barbell{display:block;width:100%;height:auto;aspect-ratio:16/10}
+.barbell rect{stroke-width:2}
+.bb-bar rect{fill:var(--line);stroke:var(--muted)}
+.bb-45 rect{fill:#1a2a3d;stroke:var(--gold)}
+.bb-25 rect{fill:#1a2a3d;stroke:var(--link)}
+.bb-10 rect,.bb-collar rect{fill:var(--panel);stroke:var(--muted)}
+.bb-dim path{fill:none;stroke:var(--muted);stroke-width:1.5}
+.bb-dim text{fill:var(--text);font:700 28px var(--head);text-anchor:middle}
+.bb-dim .bb-note{fill:var(--muted);font:400 18px var(--body)}
+
+/* Home: what I'm building right now */
+.now{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;margin-top:4rem;padding:1.5rem 1.75rem;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:.4rem}
+.now h2{margin:0 0 .3rem;font-size:1.35rem}.now p{margin:0}
+.now .status{margin-bottom:.4rem}
 
 /* Resume */
 .resume{display:grid;grid-template-columns:17rem minmax(0,1fr);gap:0 3rem}
@@ -74,4 +100,5 @@ a{color:var(--link);text-underline-offset:.2em}a:hover{color:#fff}
   #ribbon,#footer,.skip,.no-print,body::before{display:none!important}
   body{background:#fff;color:#000}main{width:100%;padding:0}
   .resume *{color:#000!important;border-color:#999!important}
+  .resume a{text-decoration:none}
 }

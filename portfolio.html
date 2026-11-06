@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <title>Joseph J. Leto - Portfolio</title>
-    <meta name="description" content="Projects by Joseph J. Leto">
+    <meta name="description" content="Projects by Joseph J. Leto, from Java games and FPGA hardware to full-stack web apps.">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0c131c">
@@ -19,8 +19,86 @@
     <main id="main">
       <div class="page-head">
         <h1>Projects</h1>
+        <p class="muted">Software, hardware, and the web: what I'm building now and what I've shipped.</p>
       </div>
-      </article>
+
+      <section aria-labelledby="now-heading">
+        <h2 class="label" id="now-heading">In progress</h2>
+
+        <article class="project" id="liftlibrary">
+          <figure class="plate">
+            <!-- Drawing of a loaded barbell, in the style of the app's own visualizer -->
+            <svg class="barbell" viewBox="0 0 640 400" role="img" aria-labelledby="bb-title">
+              <title id="bb-title">Drawing of an Olympic barbell loaded to 295 lb: two 45s, a 25, and a 10 on each side</title>
+              <g class="bb-bar">
+                <rect x="20" y="192" width="600" height="16" rx="3"/>
+                <rect x="40" y="186" width="130" height="28" rx="3"/>
+                <rect x="470" y="186" width="130" height="28" rx="3"/>
+              </g>
+              <g class="bb-45"><rect x="150" y="90" width="18" height="220" rx="3"/><rect x="130" y="90" width="18" height="220" rx="3"/><rect x="472" y="90" width="18" height="220" rx="3"/><rect x="492" y="90" width="18" height="220" rx="3"/></g>
+              <g class="bb-25"><rect x="112" y="122" width="16" height="156" rx="3"/><rect x="512" y="122" width="16" height="156" rx="3"/></g>
+              <g class="bb-10"><rect x="98" y="148" width="12" height="104" rx="3"/><rect x="530" y="148" width="12" height="104" rx="3"/></g>
+              <g class="bb-collar"><rect x="86" y="176" width="10" height="48" rx="2"/><rect x="544" y="176" width="10" height="48" rx="2"/></g>
+              <g class="bb-dim">
+                <path d="M86 340H554M86 330v20M554 330v20"/>
+                <text x="320" y="370">295 lb</text>
+                <text x="320" y="60" class="bb-note">45 + 2 × (45 + 45 + 25 + 10)</text>
+              </g>
+            </svg>
+          </figure>
+          <div>
+            <p class="status"><span class="dot" aria-hidden="true"></span>Actively building · team of 2</p>
+            <h3>LiftLibrary</h3>
+            <p>A web app that draws a barbell loaded with the plates you pick, so you can see exactly what a lift looks like before you walk up to the rack. It handles Olympic, women's, and training bars, lb and kg plates, and collars, and lets you log personal records to your own library behind a login.</p>
+            <p class="muted">Recently migrated the front end to React with Vite and moved the back end to a Flask JSON API with hashed-password accounts. Next up: deploying to a server.</p>
+            <ul class="tags"><li>React</li><li>Vite</li><li>Python</li><li>Flask</li><li>pickleDB</li><li>REST API</li></ul>
+            <a class="more" href="https://github.com/rhit-letojj/LiftLibrary" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="project" id="website">
+          <figure class="plate">
+            <img src="websiteCode.png" width="968" height="687" loading="lazy" alt="HTML code of this website's home page">
+          </figure>
+          <div>
+            <p class="status"><span class="dot" aria-hidden="true"></span>Ongoing</p>
+            <h3>Portfolio Website</h3>
+            <p>The site you're on. It started as web design practice and I keep rebuilding it as I learn: shared navigation loaded with JavaScript, a responsive layout, accessible markup, and a print-ready resume.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+            <a class="more" href="https://github.com/rhit-letojj/rhit-letojj.github.io" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+      </section>
+
+      <section aria-labelledby="done-heading">
+        <h2 class="label" id="done-heading">Completed</h2>
+
+        <article class="project" id="guitar-hero">
+          <figure class="plate">
+            <img src="schmatic.png" width="830" height="731" loading="lazy" alt="Part of the logic schematic for the FPGA rhythm game">
+          </figure>
+          <div>
+            <p class="status done">10-week course project · team of 2</p>
+            <h3>Guitar Hero Style Game on an FPGA</h3>
+            <p>My most difficult project so far. A partner and I designed a rhythm game from logic gates up and programmed an FPGA board to run it and drive the display.</p>
+            <ul class="tags"><li>Digital logic</li><li>FPGA</li><li>Intel Quartus Prime</li></ul>
+            <p class="muted">No public repository.</p>
+          </div>
+        </article>
+
+        <article class="project" id="maze-game">
+          <figure class="plate">
+            <img src="FinalUML.png" width="2502" height="1724" loading="lazy" alt="UML class diagram for the maze game">
+          </figure>
+          <div>
+            <p class="status done">CSSE 220 final project · team project</p>
+            <h3>Maze Game</h3>
+            <p>My first big project. Our team planned the game with object-oriented design and a full UML class diagram, then built it over several weeks into a complete, playable game.</p>
+            <ul class="tags"><li>Java</li><li>OOP</li><li>UML</li><li>Eclipse</li></ul>
+            <a class="more" href="https://github.com/rhit-letojj/csse220-final-team-clj" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+      </section>
     </main>
     <footer id="footer" class="strip"></footer>
     <script src="script.js"></script>
